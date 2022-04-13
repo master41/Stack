@@ -32,6 +32,8 @@ namespace Stack
         // Видалення елементу із вершини стеку.
         public T Pop()
         {
+            if (IsEmpty)
+            { throw new InvalidOperationException("Стек порожній"); }
             // Вибірка значення елементу із вузла на вершині.
             T item = first.item;
             // Встановлення посилання на нову вершину.
